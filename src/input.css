@@ -30,6 +30,15 @@
   }
 }
 
+a.active {
+  background-color: #F7F5FF;
+  font-weight: 700;
+  color: #2890FF;
+}
+a.active span {
+  background-color: #2890FF;
+}
+
 .footer-gradient {
   background: conic-gradient(from 96.55deg, #8EC5FF 5.76%, #C2ACFF 120.73%);
 }

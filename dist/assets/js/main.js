@@ -10,30 +10,6 @@ mobileMenuButton.addEventListener('click', () => {
   closeIcon.classList.toggle('hidden');
 });
 
-// tab script
-document.querySelectorAll('.tab-link').forEach(tab => {
-    tab.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        // Remove 'active' class and set opacity-0 for all tab contents
-        document.querySelectorAll('.tab-link').forEach(link => link.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(content => {
-            content.classList.add('opacity-0');
-            content.classList.remove('opacity-100');
-            content.classList.add('hidden'); // Add hidden after fading out
-        });
-
-        // Add 'active' class to clicked tab and show corresponding content
-        this.classList.add('active');
-        const target = this.getAttribute('href');
-        const content = document.querySelector(target);
-        content.classList.remove('hidden'); // Remove hidden to make it visible
-        setTimeout(() => {
-            content.classList.remove('opacity-0');
-            content.classList.add('opacity-100');
-        }, 10); // Trigger opacity transition
-    });
-});
 
 // on scroll image fade in transition js
 function isInViewport(element, offset) {
@@ -67,31 +43,3 @@ window.addEventListener("scroll", handleScroll);
 handleScroll();
 
 
-
-// Get elements
-const openVideoButton = document.getElementById('openVideo');
-const videoModal = document.getElementById('videoModal');
-const closeModalButton = document.getElementById('closeModal');
-const videoPlayer = document.getElementById('videoPlayer');
-
-// Open the modal when button is clicked
-openVideoButton.addEventListener('click', () => {
-  videoModal.classList.add('active'); // Show the modal
-  videoPlayer.play(); // Start video playback
-});
-
-// Close the modal when close button is clicked
-closeModalButton.addEventListener('click', () => {
-  videoModal.classList.remove('active'); // Hide the modal
-  videoPlayer.pause(); // Pause the video
-  videoPlayer.currentTime = 0; // Reset video playback
-});
-
-// Close the modal if user clicks outside the video content
-window.addEventListener('click', (e) => {
-  if (e.target === videoModal) {
-    videoModal.classList.remove('active');
-    videoPlayer.pause();
-    videoPlayer.currentTime = 0;
-  }
-});
