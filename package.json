@@ -1,0 +1,23 @@
+{
+  "name": "patrick",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000p\u0000a\u0000t\u0000r\u0000i\u0000c\u0000k\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/assets/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdmunnaahmed/patrick.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdmunnaahmed/patrick/issues"
+  },
+  "homepage": "https://github.com/mdmunnaahmed/patrick#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

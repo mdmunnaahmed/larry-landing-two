@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fadeIn, .fadeUp {
+  opacity: 0;
+}
+.fadeInAnimation {
+  animation: fadeIn .5s linear forwards;
+}
+.fadeUpAnimation {
+  animation: fadeUp .5s linear forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-gradient {
+  background: conic-gradient(from 96.55deg, #8EC5FF 5.76%, #C2ACFF 120.73%);
+}
+
+/* Custom styles for the modal backdrop */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 50;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Dark backdrop */
+  justify-content: center;
+  align-items: center;
+}
+.modal.active {
+  display: flex; /* Show the modal when active */
+}
