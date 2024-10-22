@@ -43,3 +43,16 @@ window.addEventListener("scroll", handleScroll);
 handleScroll();
 
 
+  // Select all menu items
+  const menuItems = document.querySelectorAll('nav a');
+
+  // Add click event listener to each menu item
+  menuItems.forEach(item => {
+    item.addEventListener('click', function() {
+      // Remove active class from all items
+      menuItems.forEach(link => link.classList.remove('active'));
+
+      // Add active class to the clicked item
+      this.classList.add('active');
+    });
+  });
